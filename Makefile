@@ -25,10 +25,15 @@ external_build_options = \
 internal_library_names = \
 driver \
 application \
+hardware \
+program-driver \
+program-application \
+program-hardware \
 
 # Project subprograms
 program_names = \
-boot
+boot \
+program 
 
 # Project libraries
 library_names = \
@@ -39,5 +44,8 @@ include $(make_dir)/Main.mk
 # Enter the internal library dependencies (by directory name)
 # 	E.g.: if libproject-a depends on libproject-b write the line above:
 #	libproject-a: libproject-b
-
+libl4boot-application: libl4boot-hardware
+libl4boot-program-application: libl4boot-program-hardware
+libl4boot-driver: libl4boot-hardware
+libl4boot-program-driver: libl4boot-program-hardware
 # Custom targets

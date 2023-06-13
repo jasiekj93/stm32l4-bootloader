@@ -15,5 +15,8 @@ namespace l4boot::application
 
         void execute();
 
+    protected:
+        void jumpToApplication();
+        void waitForProgram();
 	};
 }

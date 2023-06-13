@@ -28,8 +28,9 @@ cxx_defs := \
 
 # internal libraries
 required_internal_libraries = \
-driver \
+hardware \
 application \
+driver \
 
 # libraries
 required_libraries = \

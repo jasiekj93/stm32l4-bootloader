@@ -37,7 +37,7 @@
 
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */
-
+extern void (*hardFaultCallback)(void);
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/

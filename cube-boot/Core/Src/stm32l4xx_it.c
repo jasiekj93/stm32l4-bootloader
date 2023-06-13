@@ -36,7 +36,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
+void (*hardFaultCallback)(void) = NULL;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -84,7 +84,8 @@ void NMI_Handler(void)
 void HardFault_Handler(void)
 {
   /* USER CODE BEGIN HardFault_IRQn 0 */
-
+    if(hardFaultCallback != NULL)
+        hardFaultCallback();
   /* USER CODE END HardFault_IRQn 0 */
   while (1)
   {
