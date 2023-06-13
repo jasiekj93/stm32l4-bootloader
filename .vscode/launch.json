@@ -26,5 +26,16 @@
             "runToEntryPoint": "main",
             "interface": "swd",
         },
+        {
+            "name": "program - attach",
+            "cwd": "${workspaceRoot}",
+            "executable": "./bin/ArmM4/debug/program.elf",
+            "request": "attach",
+            "type": "cortex-debug",
+            "servertype": "jlink",
+            "device": "STM32L4R5ZI",
+            "runToEntryPoint": "main",
+            "interface": "swd",
+        },
     ]
 }

@@ -14,6 +14,8 @@ void SystemImpl::setStackAndJump(uint32_t stack, uint32_t jumpAddress)
     auto jumpPointer = (uint32_t*)jumpAddress;
     auto jumpFunction = (void(*)(void))(*jumpPointer);
 
+    HAL_SuspendTick();
+    uwTick = 0UL;
     __set_MSP(stack);
     jumpFunction();
 }
